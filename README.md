@@ -30,7 +30,7 @@ On professional broadcasts this box includes an ADR (Average Damage per Round) s
 - The accent colour changes depending on the team you're on (orange for T-side, blue for CT-side)
 - The name and stats will update to the currently spectated player when dead or in GOTV
 
-[Screenshot](overlay_preview.png)
+![Screenshot](overlay_preview.png)
 
 ## Limitations
 This overlay is designed for live stats from classic competitive matches, but it might work in other game modes (like Team Deathmatch or Casual) too. 
