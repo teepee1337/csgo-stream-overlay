@@ -33,7 +33,7 @@ You should see the output "Currently listening at...". This file too follows Val
 
 4. The box will get filled with life once you start playing CSGO! 
 
-## Limitations
+## Limitations and future updates
 This overlay is designed for live stats from classic competitive matches, but it might work in other game modes (like Team Deathmatch or Casual) too. 
 Other features such as the possibility to add your flag and team logo might come later. Feel free to contribute to this project, report bugs, or give suggestions! 
 
