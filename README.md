@@ -12,10 +12,10 @@ Apart from CSGO and the files in this project you need to install [Node.js](http
 You should see the output "Currently listening at...". This file also follows Valve's example but is modified to also recieve GET requests from websites or other software you might want to use. Leave the windows open for as long as you want to use the overlay as closing the window shuts down the local server.
 
 3. To add an overlay to your livestream you have to add `overlay.html` as a source to your streaming software. I will explain the process for [OBS](https://obsproject.com/) but it should work in a similiar fashion with other software. 
-- Add Source > Browser and give it a fitting title
-- Check the box for "Local file" and select `overlay.html`
-- I recommend changing the size to Width: 450 and Height: 150
-- Use `body { background-color: rgba(0, 0, 0, 0); overflow: hidden; }` as your Custom CSS
+   - Add Source > Browser and give it a fitting title
+   - Check the box for "Local file" and select `overlay.html`
+   - I recommend changing the size to Width: 450 and Height: 150
+   - Use `body { background-color: rgba(0, 0, 0, 0); overflow: hidden; }` as your Custom CSS
 You should now see a semitransparent black box on your preview window that will later include your live stats. Adjust the size and position to your liking. 
 
 4. The box will get filled with life once you start playing CSGO! 
@@ -29,6 +29,8 @@ On professional broadcasts this box includes an ADR (Average Damage per Round) s
 - Displays the amount of kills you got in the current round accompanied by a small skull
 - The accent colour changes depending on the team you're on (orange for T-side, blue for CT-side)
 - The name and stats will update to the currently spectated player when dead or in GOTV
+
+[Screenshot](overlay_preview.png)
 
 ## Limitations
 This overlay is designed for live stats from classic competitive matches, but it might work in other game modes (like Team Deathmatch or Casual) too. 
