@@ -1,5 +1,5 @@
 # CSGO stream overlay with Game State Integration
-Small webpage to display live stats from your Counter-Strike: Global Offensive gameplay to overlay on your livestream in the same style as seen on professional CSGO esports broadcasts.
+Small webpage to display live stats from your Counter-Strike: Global Offensive gameplay to overlay on your own livestream.
 
 ## Features
 The design of the overlay closely follows the style you see on broadcasts of CSGO esports, but has been adjusted due to technical limitations and reduced in complexity as it is meant for streamers who broadcast their own gameplay therefore making certain stats (armor value, health value, ammo count etc.) reduntant since they are already part of the game's HUD. 
