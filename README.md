@@ -28,12 +28,13 @@ You should see the output "Currently listening at...". This file too follows Val
    - Check the box for "Local file" and select `overlay.html`
    - I recommend changing the size to Width: 450 and Height: 150
    - Use `body { background-color: rgba(0, 0, 0, 0); overflow: hidden; }` as your Custom CSS
+
 You should now see a semitransparent black box on your preview window that will later include your live stats. Adjust the size and position to your liking. 
 
 4. The box will get filled with life once you start playing CSGO! 
 
 ## Limitations
 This overlay is designed for live stats from classic competitive matches, but it might work in other game modes (like Team Deathmatch or Casual) too. 
-Other features such as the possibility to add your flag and team logo might come later. Feel free to contribute to this project, report bugs, or give suggestions. 
+Other features such as the possibility to add your flag and team logo might come later. Feel free to contribute to this project, report bugs, or give suggestions! 
 
-GLHF! 
+_GLHF!_
