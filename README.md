@@ -25,9 +25,10 @@ The design of the overlay closely follows the style you see on broadcasts of CSG
 On professional broadcasts this box includes an ADR (Average Damage per Round) stat, which is not possible here since CSGO's Game State Integration doesn't send this information. It has been replaced by KDR (Kill-Death Ratio). 
 
 - Displays your Steam profile name
-- Displays your current kills, assists and deaths
+- Displays your total kills, assists and deaths in the match
+- Displays the amount of kills you got in the current round accompanied by a small skull
 - The accent colour changes depending on the team you're on (orange for T-side, blue for CT-side)
-- The name and stats will update to the currently spectated player 
+- The name and stats will update to the currently spectated player when dead or in GOTV
 
 ## Limitations
 This overlay is designed for live stats from classic competitive matches, but it might work in other game modes (like Team Deathmatch or Casual) too. 
