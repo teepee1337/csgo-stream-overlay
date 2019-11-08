@@ -34,8 +34,9 @@ You should see the output "Currently listening at...". This file too follows Val
 4. The box will get filled with life once you start playing CSGO! 
 
 ## Limitations and future updates
-This overlay is designed for live stats from classic competitive matches, but it might work in other game modes (like Team Deathmatch or Casual) too. 
-Other features such as the possibility to add your flag and team logo might come later. Feel free to contribute to this project, report bugs, or give suggestions! 
+This overlay is designed for live stats from classic competitive matches, but it might work in other game modes (like Team Deathmatch or Casual) too. Please keep in mind that this is just a small project from someone with next to no prior experience in web development or JavaScript. I just wanted to create a nice widget for my streamer friends and learned the needed languages on the way. 
+
+Other features such as the possibility to add your flag and a team logo might come later. Feel free to contribute to this project, report bugs, or give suggestions! 
 
 ## Acknowledgments
 The skull icon for current round kills was made by Freepik from www.flaticon.com
