@@ -1,5 +1,5 @@
 # CSGO stream overlay with Game State Integration
-Small webpage to display live stats from your Counter-Strike: Global Offensive gameplay to overlay on your livestream in the same style as seen on professional CSGO esports broadcasts
+Small webpage to display live stats from your Counter-Strike: Global Offensive gameplay to overlay on your livestream in the same style as seen on professional CSGO esports broadcasts.
 
 ## Features
 The design of the overlay closely follows the style you see on broadcasts of CSGO esports, but has been adjusted due to technical limitations and reduced in complexity as it is meant for streamers who broadcast their own gameplay therefore making certain stats (armor value, health value, ammo count etc.) reduntant since they are already part of the game's HUD. 
@@ -21,7 +21,7 @@ Apart from CSGO and the files in this project you need to install [Node.js](http
 
 2. Open PowerShell or Command Prompt in the directory where `gsiserver.js` is located and enter
 `node gsiserver.js`
-You should see the output "Currently listening at...". This file also follows Valve's example but is modified to also recieve GET requests from websites or other software you might want to use. Leave the windows open for as long as you want to use the overlay as closing the window shuts down the local server.
+You should see the output "Currently listening at...". This file too follows Valve's example but is modified to also recieve GET requests from websites or other software you might want to use. Leave the windows open for as long as you want to use the overlay as closing the window shuts down the local server.
 
 3. To add an overlay to your livestream you have to add `overlay.html` as a source to your streaming software. I will explain the process for [OBS](https://obsproject.com/) but it should work in a similiar fashion with other software. 
    - Add Source > Browser and give it a fitting title
