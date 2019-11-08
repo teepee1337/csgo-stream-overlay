@@ -1,6 +1,18 @@
 # CSGO stream overlay with Game State Integration
 Small webpage to display live stats from your Counter-Strike: Global Offensive gameplay to overlay on your livestream in the same style as seen on professional CSGO esports broadcasts
 
+## Features
+The design of the overlay closely follows the style you see on broadcasts of CSGO esports, but has been adjusted due to technical limitations and reduced in complexity as it is meant for streamers who broadcast their own gameplay therefore making certain stats (armor value, health value, ammo count etc.) reduntant since they are already part of the game's HUD. 
+On professional broadcasts this box includes an ADR (Average Damage per Round) stat, which is not possible here since CSGO's Game State Integration doesn't send this information. It has been replaced by KDR (Kill-Death Ratio). 
+
+- Displays your Steam profile name
+- Displays your total kills, assists and deaths in the match
+- Displays the amount of kills you got in the current round accompanied by a small skull
+- The accent colour changes depending on the team you're on (orange for T-side, blue for CT-side)
+- The name and stats will update to the currently spectated player when dead or in GOTV
+
+![Screenshot](overlay_preview.png)
+
 ## Prerequisites
 Apart from CSGO and the files in this project you need to install [Node.js](https://nodejs.org/en/) to run the local server which will recieve updates from the game and forward it to your webpage.
 
@@ -19,18 +31,6 @@ You should see the output "Currently listening at...". This file also follows Va
 You should now see a semitransparent black box on your preview window that will later include your live stats. Adjust the size and position to your liking. 
 
 4. The box will get filled with life once you start playing CSGO! 
-
-## Features
-The design of the overlay closely follows the style you see on broadcasts of CSGO esports, but has been adjusted due to technical limitations and reduced in complexity as it is meant for streamers who broadcast their own gameplay therefore making certain stats (armor value, health value, ammo count etc.) reduntant since they are already part of the game's HUD. 
-On professional broadcasts this box includes an ADR (Average Damage per Round) stat, which is not possible here since CSGO's Game State Integration doesn't send this information. It has been replaced by KDR (Kill-Death Ratio). 
-
-- Displays your Steam profile name
-- Displays your total kills, assists and deaths in the match
-- Displays the amount of kills you got in the current round accompanied by a small skull
-- The accent colour changes depending on the team you're on (orange for T-side, blue for CT-side)
-- The name and stats will update to the currently spectated player when dead or in GOTV
-
-![Screenshot](overlay_preview.png)
 
 ## Limitations
 This overlay is designed for live stats from classic competitive matches, but it might work in other game modes (like Team Deathmatch or Casual) too. 
