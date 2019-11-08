@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<hmtl>
+<head>
+<meta charset="UTF-8">
+<title>CSGO GSI</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(function() {
+	//stat refresh interval in milliseconds
+  	var interval = 500;
+  	var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://127.0.0.1:3333",
+	"method": "GET"
+    }
+  
+  	var fetchStats = function() {
+    $.ajax(settings).done(function(response) {
+    $('#kill').empty();
+	$('#assist').empty();
+	$('#death').empty();
+	$('#player').empty();
+	$('#roundkill').empty();
+	$('#team').empty();
+	$('#kdr').empty();
+	
+	var name = response.player.name;
+    $("#player").append(name);
+
+    if (response.player.match_stats === undefined) {
+		var kills = 0
+		var assists = 0
+		var deaths = 0
+		var kd = 0
+	} else {
+	var kills = response.player.match_stats.kills;
+  		$("#kill").append(kills);
+
+	var assists = response.player.match_stats.assists;
+  		$("#assist").append(assists);
+	
+	var deaths = response.player.match_stats.deaths;
+  		$("#death").append(deaths);
+
+	var kd = kills / deaths;
+	if (!isFinite(kd)) {
+	  	var kd = kills
+	}
+		$('#kdr').append(kd.toFixed(2));
+	}
+	
+	if (response.player.state === undefined) {
+		var roundkills = 0
+	} else {
+		var roundkills = response.player.state.round_kills;
+		$("#roundkill").append(roundkills);
+	}
+
+	if (roundkills > 0){
+		$("#roundkill").css("opacity", "1")
+		$("#skull").css("opacity", "1")
+	} else {
+		$("#roundkill").css("opacity", "0")
+		$("#skull").css("opacity", "0")
+	}
+
+	if (response.player.team === undefined){
+		var side = "NA"
+	} else {
+		var side = response.player.team;
+	}
+	   
+	if (side == "T"){
+		$("#title").css("color", "#ff8400")
+		$("#second").css("color", "#ff8400")
+	} else if (side == "CT"){
+		$("#title").css("color", "#00c3ff")
+		$("#second").css("color", "#00c3ff")
+	} else {
+		$("#title").css("color", "white")
+		$("#second").css("color", "white")
+	}
+
+	var steamid = response.player.steamid;
+	var mainsteamid = response.provider.steamid;
+	
+	if (steamid != mainsteamid){
+	$("#flag").css("opacity", "0")
+	}
+
+    }).fail(function() {
+      console.log('Error!');
+      
+    }).always(function() {
+      setTimeout(fetchStats, interval);
+    });
+  
+}
+  
+  fetchStats();
+
+});
+
+</script>
+<style>
+table#GSI {
+  color: black;
+  font-family: "Roboto";
+  font-size: 23px;
+  table-layout: fixed;
+  width: 450px;
+  border: none;
+  border-collapse:collapse;
+  }
+td {
+  overflow: hidden;
+  text-align: center;
+}
+tr#title {
+  height: 60px;
+  vertical-align: center;
+  font-size: 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  color: white;
+  
+}
+tr#second {
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+tr#third {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 30px;
+}
+img#flag {
+  height: 30px;
+  width: 50px;
+  position: absolute;
+  top: 23px;
+  left: 380px;
+  opacity: 1;
+}
+td#roundkill {
+  text-align: right;
+  font-size: 23px;
+}
+img#skull {
+  height: 27px;
+  width: 27px;
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  opacity: 0;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<table id="GSI">
+<tr id="title">
+	<td id="player" colspan="6"></td>
+</tr>
+<tr id="second">
+	<td> </td>
+	<td>K</td>
+	<td>A</td>
+	<td>D</td>
+	<td>KDR</td>
+	<td> </td>
+</tr>
+<tr id="third">
+	<td id="roundkill"></td>
+	<td id="kill"></td>
+	<td id="assist"></td>
+	<td id="death"></td>
+	<td id="kdr"></td>
+	<td></td>
+</tr>
+</table>
+<img id="flag" src="germany.png" alt="Flag">
+<img id="skull" src="skull.png" alt="Kills this round">
+</div>
+<br>
+<br>
+<br>
+<br>
+<div>Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>
+</body>
+</html>
