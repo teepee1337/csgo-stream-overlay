@@ -37,4 +37,7 @@ You should see the output "Currently listening at...". This file too follows Val
 This overlay is designed for live stats from classic competitive matches, but it might work in other game modes (like Team Deathmatch or Casual) too. 
 Other features such as the possibility to add your flag and team logo might come later. Feel free to contribute to this project, report bugs, or give suggestions! 
 
+## Acknowledgments
+The skull icon for current round kills was made by Freepik from www.flaticon.com
+
 _GLHF!_
